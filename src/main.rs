@@ -5,6 +5,7 @@ use std::{
     vec,
 };
 
+# add description here.
 fn main() {
     let (sender, receiver) = mpsc::channel::<String>();
     let receiver_mutex = Arc::new(Mutex::new(receiver));
