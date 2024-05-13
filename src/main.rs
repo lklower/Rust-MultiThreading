@@ -5,10 +5,15 @@ use std::{
     vec,
 };
 
+mod malaysia;
+use malaysia::Selangor;
+
 /**
  * main function
  **/
 fn main() {
+    Selangor{name: "klang".to_string()};
+    
     let (sender, receiver) = mpsc::channel::<String>();
     let receiver_mutex = Arc::new(Mutex::new(receiver));
     let thread_numbers: usize = 4;
