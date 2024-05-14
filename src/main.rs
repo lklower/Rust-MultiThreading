@@ -8,11 +8,8 @@ use std::{
 mod malaysia;
 use malaysia::Selangor;
 
-/**
- * main function
- **/
 fn main() {
-    Selangor{name: "klang".to_string()};
+    Selangor{name: "klang".to_string(), states: ["bukit tinggi", "Bukit Raja", "Kampung Jawa", "Kapar", "Meru"]};
     
     let (sender, receiver) = mpsc::channel::<String>();
     let receiver_mutex = Arc::new(Mutex::new(receiver));
